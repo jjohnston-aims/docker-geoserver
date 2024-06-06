@@ -98,7 +98,7 @@ export GEOSERVER_OPTS="-Djava.awt.headless=true -server -Xms${INITIAL_MEMORY} -X
        ${ADDITIONAL_JAVA_STARTUP_OPTIONS} "
 
 ## Prepare the JVM command line arguments
-export JAVA_OPTS="${JAVA_OPTS} ${GEOSERVER_OPTS}"
+export JAVA_OPTS="-Xms512M -Xss256M -Xmx512M ${JAVA_OPTS} ${GEOSERVER_OPTS}"
 
 
 # Chown again - seems to fix issue with resolving all created directories
